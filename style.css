@@ -1,0 +1,190 @@
+:root {
+
+    --clr-primary-pale-blue: hsl(225, 100%, 94%);
+    --clr-primary-bright-blue: hsl(245, 75%, 52%);
+
+    --clr-neutral-very-pale-blue: hsl(225, 100%, 98%);
+    --clr-neutral-desaturated-blue: hsl(224, 23%, 55%);
+    --clr-neutral-dark-blue: hsl(223, 47%, 23%);
+   
+    --ff-base: 'Red Hat Display', sans-serif;
+    
+    font-size: 62.5%;
+
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100dvh;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  body {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-medium);
+    color: var(--clr-neutral-desaturated-blue);
+    font-size: 1.5rem;
+    text-align: center;
+
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+
+    background-image: url('images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--clr-primary-pale-blue);
+  }
+
+  .order-summary {
+    background-color: #fff;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    max-width: 420px;
+    box-shadow: 0 2rem 3rem -.8rem var(--clr-neutral-desaturated-blue);
+  }
+
+  .order-summary__content {
+    padding: 3.4rem 2rem;
+    display: grid;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    font-weight: var(--fw-black);
+    color: var(--clr-neutral-dark-blue);
+  }
+
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: var(--clr-neutral-very-pale-blue);
+    border-radius: 1.5rem;
+    padding: 1.5rem 1.3rem;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .summary-title {
+    color: var(--clr-neutral-dark-blue);
+    font-weight: var(--fw-black);
+  }
+
+  .summary-price {
+    display: block;
+    color: var(--clr-neutral-desaturated-blue);
+    font-weight: var(--fw-medium);
+  }
+
+  .summary-link {
+    color: var(--clr-primary-bright-blue);
+    font-weight: var(--fw-bold);
+  }
+
+  .summary-link:hover,
+  .summary-link:active {
+   text-decoration: none;
+   opacity: .65;
+  }
+
+  .btn-proceed {
+    padding: 1.5rem 1.3rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: var(--clr-primary-bright-blue);
+    color: var(--clr-neutral-very-pale-blue);
+    font-weight: var(--fw-bold);
+    box-shadow: 0 2rem 3rem -.8rem var(--clr-neutral-desaturated-blue);
+  }
+
+  .btn-proceed:hover,
+  .btn-proceed:active {
+    cursor: pointer;
+    opacity: .65;
+  }
+
+  .btn-cancel {
+    text-decoration: none;
+    color: var(--clr-neutral-desaturated-blue);
+    font-weight: var(--fw-bold);
+  }
+
+  .btn-cancel:hover,
+  .btn-cancel:active {
+    color: var(--clr-neutral-dark-blue);
+    font-weight: var(--fw-black);
+  }
+
+  .attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 700px) {
+    body {
+        background-image: url('images/pattern-background-desktop.svg');
+    }
+
+    .order-summary__content {
+        padding: 5rem 4rem;
+    }
+}
