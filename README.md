@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [click here]()
-- Live Site URL: [click here]()
+- Solution URL: [click here](https://www.frontendmentor.io/solutions/order-summary-component-St9SYE5985)
+- Live Site URL: [click here](https://main--imaginative-scone-d776da.netlify.app/)
 
 ## My process
 
