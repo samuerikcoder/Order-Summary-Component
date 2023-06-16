@@ -88,6 +88,23 @@
     overflow: hidden;
     max-width: 420px;
     box-shadow: 0 2rem 3rem -.8rem var(--clr-neutral-desaturated-blue);
+
+    animation: rotate 3s ease-in;
+  }
+
+  .order-summary__img {
+    position: relative;
+    display: inline-block;
+  }
+
+  .fa-headphones {
+    position: absolute;
+    top: 50px;
+    left: 90px;
+    align-self: center;
+    cursor: pointer;
+
+    color: #cd7df3;
   }
 
   .order-summary__content {
@@ -149,12 +166,14 @@
     color: var(--clr-neutral-very-pale-blue);
     font-weight: var(--fw-bold);
     box-shadow: 0 2rem 3rem -.8rem var(--clr-neutral-desaturated-blue);
+    transition: transform 0.3s;
   }
 
   .btn-proceed:hover,
   .btn-proceed:active {
     cursor: pointer;
     opacity: .65;
+    transform: translateY(-5px);
   }
 
   .btn-cancel {
@@ -187,4 +206,33 @@
     .order-summary__content {
         padding: 5rem 4rem;
     }
+}
+
+@keyframes card {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    opacity: 0;
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    opacity:1;
+    transform: rotateY(360deg);
+  }
+
 }
