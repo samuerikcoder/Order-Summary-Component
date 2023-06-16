@@ -95,6 +95,7 @@
   .order-summary__img {
     position: relative;
     display: inline-block;
+    overflow: hidden;
   }
 
   .fa-headphones {
